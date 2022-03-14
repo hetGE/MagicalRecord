@@ -199,7 +199,7 @@ NSString * const kMagicalRecordImportAttributeUseDefaultValueWhenNotPresent = @"
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored \
     "-Warc-performSelector-leaks"
-        if (implementsShouldImport && !(BOOL)[self performSelector:shouldImportSelector withObject:relatedObjectData])
+        if (implementsShouldImport && ![self performSelector:shouldImportSelector withObject:relatedObjectData])
         {
             continue;
         }
